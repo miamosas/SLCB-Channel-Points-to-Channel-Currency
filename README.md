@@ -21,9 +21,9 @@ as your stream key!
 
 Once installed, just add custom channel point rewards to your twitch channel and then _exactly_ match the names of the reward to a Twitch Reward event in the script settings within Streamlabs OBS. In this example, please refer to `Point Testing` that costs `25 Channel Points`
 
-![image](https://user-images.githubusercontent.com/50642352/82403376-4ed05e00-9a24-11ea-80c9-17751ff32085.png)
+![image1](https://user-images.githubusercontent.com/64919861/83341215-9c0ac600-a295-11ea-997b-2fc5a16df307.png)
 
-![image2](https://user-images.githubusercontent.com/50642352/82403434-71fb0d80-9a24-11ea-860d-5c7d8cafe4e7.png)
+![image2](https://user-images.githubusercontent.com/64919861/83341207-7978ad00-a295-11ea-9094-76d697e2395a.png)
 
 ## Author
 
