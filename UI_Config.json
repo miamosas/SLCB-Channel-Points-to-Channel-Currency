@@ -1,0 +1,90 @@
+{
+	"output_file": "settings.json",
+	"TwitchReward1Name": {
+		"type": "textbox",
+		"value": "",
+		"label": "Title of Twitch Reward",
+		"tooltip": "Specify the name of the Twitch Reward that will trigger this event when detected.",
+		"group": "Twitch Reward 1"
+	},
+	"R1Points": {
+		"type": "numberbox",
+		"label": "Amount of Channel Currency to Give",
+		"value": 1000,
+		"tooltip": "Specify the amount of channel currency to award. Custom Amount.",
+		"group": "Twitch Reward 1"
+	},
+	"TwitchReward2Name": {
+		"type": "textbox",
+		"value": "",
+		"label": "Title of Twitch Reward",
+		"tooltip": "Specify the name of the Twitch Reward that will trigger this event when detected.",
+		"group": "Twitch Reward 2"
+	},
+	"R2Points": {
+		"type": "numberbox",
+		"label": "Amount of Channel Currency to Give",
+		"value": 1000,
+		"tooltip": "Specify the amount of channel currency to award. Custom Amount.",
+		"group": "Twitch Reward 2"
+	},
+	"TwitchReward3Name": {
+		"type": "textbox",
+		"value": "",
+		"label": "Title of Twitch Reward",
+		"tooltip": "Specify the name of the Twitch Reward that will trigger this event when detected.",
+		"group": "Twitch Reward 3"
+	},
+	"R3Points": {
+		"type": "numberbox",
+		"label": "Amount of Channel Currency to Give",
+		"value": 1000,
+		"tooltip": "Specify the amount of channel currency to award. Custom Amount.",
+		"group": "Twitch Reward 3"
+	},
+	"TwitchReward4Name": {
+		"type": "textbox",
+		"value": "",
+		"label": "Title of Twitch Reward",
+		"tooltip": "Specify the name of the Twitch Reward that will trigger this event when detected.",
+		"group": "Twitch Reward 4"
+	},
+	"R4Points": {
+		"type": "numberbox",
+		"label": "Amount of Channel Currency to Give",
+		"value": 1000,
+		"tooltip": "Specify the amount of channel currency to award. Custom Amount.",
+		"group": "Twitch Reward 4"
+	},
+	"TwitchOAuthToken": {
+		"type": "textbox",
+		"value": "",
+		"label": "Twitch oAuth Token",
+		"tooltip": "Enter an oAuth token that allows the bot to read channel point redemptions on the channel being watched.",
+		"group": "Twitch oAuth - KEEP HIDDEN"
+	},
+	"btnGetToken": {
+		"type": "button",
+		"label": "Get Token",
+		"tooltip": "Generate an oAuth Token for the watched twitch account with permissions to read channel point redemptions.",
+		"wsevent": "",
+		"function": "GetToken",
+		"group": "Twitch oAuth - KEEP HIDDEN"
+	},
+	"btnreadme": {
+		"type": "button",
+		"label": "open readme",
+		"tooltip": "read this!",
+		"wsevent": "",
+		"_comment": "Do not change the function name! Ever!!",
+		"function": "openreadme",
+		"group": ""
+	},
+	"EnableDebug": {
+		"type": "checkbox",
+		"value": true,
+		"label": "Enable Debug",
+		"tooltip": "Enable or disable debug logs. Enabled by default.",
+		"group": "Debug Settings"
+	}
+}
