@@ -13,7 +13,7 @@ ScriptName = "Twitch Channel Points to Currency"
 Website = "https://www.twitch.tv/IceyGlaceon"
 Description = "Script to trigger automagically add currency for users that use channel point reward redemptions."
 Creator = "IceyGlaceon"
-Version = "1.0.0.2"
+Version = "1.0.0"
 
 #  Required Define Global Variables
 SettingsFile = os.path.join(os.path.dirname(__file__), "settings.json")
