@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Importing Libraries Needed
+# Importing Required Libraries
 import clr, codecs, json, os, re, sys, threading, datetime
 
 clr.AddReference("IronPython.Modules.dll")
@@ -15,7 +15,7 @@ Description = "Script to trigger automagically add currency for users that use c
 Creator = "IceyGlaceon"
 Version = "1.0.0.2"
 
-#   Define Global Variables
+#  Required Define Global Variables
 SettingsFile = os.path.join(os.path.dirname(__file__), "settings.json")
 README = os.path.join(os.path.dirname(__file__), "README.md")
 EventReceiver = None
@@ -23,9 +23,6 @@ ThreadQueue = []
 CurrentThread = None
 PlayNextAt = datetime.datetime.now()
 
-#---------------------------------------
-# Classes
-#---------------------------------------
 class Settings(object):
     def __init__(self, SettingsFile=None):
         if SettingsFile and os.path.isfile(SettingsFile):
@@ -85,7 +82,7 @@ def EventReceiverConnected(sender, e):
     if ScriptSettings.EnableDebug:
         Parent.Log(ScriptName, "Event receiver connecting")
 # -----------------------------------
-#  Get Channel id for Username
+#  Get Channel ID for Username
 # -----------------------------------
     headers = {
         "Client-ID": "icyqwwpy744ugu5x4ymyt6jqrnpxso",
@@ -211,7 +208,7 @@ def Unload():
     return
 
 #---------------------------
-#   [Optional] ScriptToggled (Notifies you when a user disables your script or enables it)
+#   [Optional] ScriptToggled (Notifies you when a user disables your script or enables it). Do not rename openreadme.
 #---------------------------
 def ScriptToggled(state):
     return

@@ -82,9 +82,9 @@
 	},
 	"EnableDebug": {
 		"type": "checkbox",
-		"value": true,
+		"value": false,
 		"label": "Enable Debug",
-		"tooltip": "Enable or disable debug logs. Enabled by default.",
+		"tooltip": "Enable or disable debug logs.",
 		"group": "Debug Settings"
 	}
 }
