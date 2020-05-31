@@ -117,11 +117,11 @@ def EventReceiverRewardRedeemed(sender, e):
     if e.RewardTitle == ScriptSettings.TwitchReward1Name:
         ThreadQueue.append(threading.Thread(target=RewardRedeemedWorker,args=(reward, ScriptSettings.R1Points, dataUser, dataUserName)))
     if e.RewardTitle == ScriptSettings.TwitchReward2Name:
-        ThreadQueue.append(threading.Thread(target=RewardRedeemedWorker,args=(reward, ScriptSettings.R1Points, dataUser, dataUserName)))
+        ThreadQueue.append(threading.Thread(target=RewardRedeemedWorker,args=(reward, ScriptSettings.R2Points, dataUser, dataUserName)))
     if e.RewardTitle == ScriptSettings.TwitchReward3Name:
-        ThreadQueue.append(threading.Thread(target=RewardRedeemedWorker,args=(reward, ScriptSettings.R1Points, dataUser, dataUserName)))
+        ThreadQueue.append(threading.Thread(target=RewardRedeemedWorker,args=(reward, ScriptSettings.R3Points, dataUser, dataUserName)))
     if e.RewardTitle == ScriptSettings.TwitchReward4Name:
-        ThreadQueue.append(threading.Thread(target=RewardRedeemedWorker,args=(reward, ScriptSettings.R1Points, dataUser, dataUserName)))
+        ThreadQueue.append(threading.Thread(target=RewardRedeemedWorker,args=(reward, ScriptSettings.R4Points, dataUser, dataUserName)))
     return
 
 def RewardRedeemedWorker(reward, amount, dataUser, dataUserName):
