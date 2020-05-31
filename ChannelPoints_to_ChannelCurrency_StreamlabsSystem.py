@@ -30,7 +30,7 @@ class Settings(object):
             with codecs.open(SettingsFile, encoding="utf-8-sig", mode="r") as f:
                 self.__dict__ = json.load(f, encoding="utf-8")
         else:
-            self.EnableDebug = True
+            self.EnableDebug = False
             self.TwitchOAuthToken = ""
             self.TwitchReward1Name = ""
             self.R1Points = 1000
