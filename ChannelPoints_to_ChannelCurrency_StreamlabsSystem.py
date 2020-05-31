@@ -13,7 +13,7 @@ ScriptName = "Twitch Channel Points to Currency"
 Website = "https://www.twitch.tv/IceyGlaceon"
 Description = "Script to trigger automagically add currency for users that use channel point reward redemptions."
 Creator = "IceyGlaceon"
-Version = "1.0.0"
+Version = "1.0.1"
 
 #  Required Define Global Variables
 SettingsFile = os.path.join(os.path.dirname(__file__), "settings.json")
@@ -23,6 +23,7 @@ ThreadQueue = []
 CurrentThread = None
 PlayNextAt = datetime.datetime.now()
 
+# Define Values Here. If there is no settings file created, then use default values in else statement.
 class Settings(object):
     def __init__(self, SettingsFile=None):
         if SettingsFile and os.path.isfile(SettingsFile):
@@ -103,17 +104,19 @@ def EventReceiverConnected(sender, e):
 
 # -----------------------------------
 #  Actual Conversion and Application Done Here
+#  e.DisplayName == streamlabs chatbot data.UserName.
+#  e.Login == streamlabs chatbot data.User
+#  This does NOT transfer equally for youtube/mixer. Use resources in README for alternatives.
 # -----------------------------------
 def EventReceiverRewardRedeemed(sender, e):
     if ScriptSettings.EnableDebug:
         Parent.Log(ScriptName, "Event triggered")
-        # e.DisplayName == streamlabs chatbot data.UserName. e.Login == streamlabs chatbot data.User
-        # This does NOT transfer equally for youtube/mixer. Use resources in README for alternatives.
         Parent.Log(ScriptName, "Testing twitch reward name: " + e.RewardTitle)
-        Parent.Log(ScriptName, "This is the TwitchReward1Name: " + ScriptSettings.TwitchReward1Name)
-        dataUser = e.Login
-        dataUserName = e.DisplayName
-        reward = e.RewardTitle
+
+    dataUser = e.Login
+    dataUserName = e.DisplayName
+    reward = e.RewardTitle
+
     if e.RewardTitle == ScriptSettings.TwitchReward1Name:
         ThreadQueue.append(threading.Thread(target=RewardRedeemedWorker,args=(reward, ScriptSettings.R1Points, dataUser, dataUserName)))
     if e.RewardTitle == ScriptSettings.TwitchReward2Name:
