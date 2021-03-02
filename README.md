@@ -32,7 +32,7 @@ I highly recommend turning on debugging/logging before you rock and roll with th
 
 ## Author
 
-IceyGlaceon - [Twitch](https://www.twitch.tv/iceyglaceon), [Twitter](https://www.twitter.com/theiceyglaceon)
+Miamosas - [Twitch](https://www.twitch.tv/miamosas), [Twitter](https://www.twitter.com/miamosas)
 
 ## Changelog
 v. 1.0.0 - Initial Commit
